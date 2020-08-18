@@ -16,6 +16,22 @@
             <url>https://maven.pkg.github.com/ManjunathPrabhakar/github-example-package</url>
         </repository>
     </distributionManagement>
+    <developers>
+        <developer>
+            <name>Manjunath Prabhakar</name>
+            <email>manjunath189@gmail.com</email>
+            <organization>com.github.manjunathprabhakar</organization>
+            <organizationUrl>https://github.com/ManjunathPrabhakar/github-example-package</organizationUrl>
+        </developer>
+    </developers>
+
+    <scm>
+        <connection>scm:git:git://github.com/ManjunathPrabhakar/github-example-package.git</connection>
+        <developerConnection>scm:git:https://github.com/ManjunathPrabhakar/github-example-package.git
+        </developerConnection>
+        <url>https://github.com/ManjunathPrabhakar/github-example-package</url>
+        <tag>github-example-package</tag>
+    </scm>
 
     <build>
         <pluginManagement>
@@ -46,6 +62,12 @@
                     <source>8</source>
                     <target>8</target>
                 </configuration>
+            </plugin>
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-release-plugin</artifactId>
+                <version>3.0.0-M1</version>
             </plugin>
         </plugins>
     </build>
