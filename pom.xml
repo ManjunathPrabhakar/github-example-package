@@ -10,16 +10,16 @@
     <distributionManagement>
         <repository>
             <id>github</id>
-            <name>GitHub ManjunathPrabhakar Apache Maven Packages</name>
-            <url>https://maven.pkg.github.com/ManjunathPrabhakar/github-example-package</url>
+            <name>GitHub devopsnishu Apache Maven Packages</name>
+            <url>https://maven.pkg.github.com/devopsnishu/github-example-package</url>
         </repository>
     </distributionManagement>
     <developers>
         <developer>
-            <name>Manjunath Prabhakar</name>
-            <email>manjunath189@gmail.com</email>
-            <organization>com.github.manjunathprabhakar</organization>
-            <organizationUrl>https://github.com/ManjunathPrabhakar/github-example-package</organizationUrl>
+            <name>devopsnishur</name>
+            <email>nishuranirai1997@gmail.com</email>
+            <organization>com.github.devopsnishur</organization>
+            <organizationUrl>https://github.com/devopsnishu/github-example-package</organizationUrl>
         </developer>
     </developers>
 
