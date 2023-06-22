@@ -28,11 +28,13 @@ jobs:
       run: mvn -B package --file pom.xml
     - name: Test with Maven
       run: mvn -B test --file pom.xml
-    
-    - name: Publish to GitHub Packages Apache Maven
-      run: mvn deploy -s $GITHUB_WORKSPACE/settings.xml
-      env:
-        GITHUB_TOKEN: ${{secrets.TOKEN }}
+    - name: Archive production artifacts
+      uses: actions/upload-artifact@v2
+      with:
+        name: Java-jar
+        path: |
+          src/target/*.jar
+          src/target/*.zip
 
     -
       name: Login to Docker Hub
