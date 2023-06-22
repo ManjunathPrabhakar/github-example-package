@@ -3,9 +3,9 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>org.example</groupId>
-    <artifactId>github-example-package</artifactId>
-    <version>1.2-SNAPSHOT</version>
+    <artifactId>src</artifactId>
     <packaging>jar</packaging>
+    <name>Java-jar</name>
     <properties>
   <sonar.organization>devopsnishu</sonar.organization>
   <sonar.host.url>https://sonarcloud.io</sonar.host.url>
