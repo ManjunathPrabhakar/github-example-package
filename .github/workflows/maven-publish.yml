@@ -31,3 +31,14 @@ jobs:
       run: mvn deploy -s $GITHUB_WORKSPACE/settings.xml
       env:
         GITHUB_TOKEN: ${{secrets.TOKEN }}
+  docker:
+    uses: devopsnishu/Reusable-Action/.github/workflows/reusable.yml@main
+    with:
+      
+      image_name: my-awesome-app
+      tags: latest
+      dockerfile: Dockerfile
+    secrets:
+      DOCKERHUB_USERNAME: ${{secrets.DOCKERHUB_USERNAME}}
+      DOCKERHUB_PASSWORD: ${{secrets.DOCKERHUB_PASSWORD}}
+        
