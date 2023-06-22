@@ -36,11 +36,7 @@ jobs:
         GITHUB_TOKEN: ${{secrets.TOKEN }}
 
 
-    - name: SonarCloud Scan
-      uses: SonarSource/sonarcloud-github-action@master
-      env:
-        SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-        SONAR_HOST_URL: ${{ secrets.SONAR_HOST_URL }} 
+    
  
     -
       name: Login to Docker Hub
