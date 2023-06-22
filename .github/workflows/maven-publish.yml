@@ -44,7 +44,7 @@ jobs:
       id: meta
       uses: docker/metadata-action@v4
       with:
-          images: ${{ secrets.DOCKERHUB_USERNAME }}/ java
+          images: ${{ secrets.DOCKERHUB_USERNAME }}/java
           
     -
        name: Build and push
