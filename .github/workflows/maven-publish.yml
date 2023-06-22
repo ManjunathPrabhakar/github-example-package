@@ -26,6 +26,11 @@ jobs:
 
     - name: Build with Maven
       run: mvn -B package --file pom.xml
+    - name: Analyze with SonarCloud
+      run:  mvn -B verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Dsonar.projectKey=devopsnishu_github-example-package
+      env:
+        SONAR_HOST_URL: ${{ secrets.SONAR_HOST_URL }}
+        SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
     - name: Test with Maven
       run: mvn -B test --file pom.xml
     - name: Archive production artifacts
