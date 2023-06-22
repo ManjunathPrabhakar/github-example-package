@@ -24,10 +24,10 @@
     </developers>
 
     <scm>
-        <connection>scm:git:git://github.com/ManjunathPrabhakar/github-example-package.git</connection>
-        <developerConnection>scm:git:https://github.com/ManjunathPrabhakar/github-example-package.git
+        <connection>scm:git:git://github.com/devopsnishu/github-example-package.git</connection>
+        <developerConnection>scm:git:https://github.com/devopsnishu/github-example-package.git
         </developerConnection>
-        <url>https://github.com/ManjunathPrabhakar/github-example-package</url>
+        <url>https://github.com/devopsnishu/github-example-package</url>
         <tag>github-example-package</tag>
     </scm>
 
