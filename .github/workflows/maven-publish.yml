@@ -44,7 +44,7 @@ jobs:
       id: meta
       uses: docker/metadata-action@v4
       with:
-          images: nishu1997/nodeapp:1.2
+          images: nishu1997/nodeapp
           
     -
        name: Build and push
