@@ -31,6 +31,9 @@ jobs:
       env:
         SONAR_HOST_URL: ${{ secrets.SONAR_HOST_URL }}
         SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+    -  name: API with curl
+       run: |  
+            curl -x GET https://sonarcloud.io/component_measures?metric=Coverage&id=devopsnishu_github-example-package
     - name: Test with Maven
       run: mvn -B test --file pom.xml
     - name: Archive production artifacts
