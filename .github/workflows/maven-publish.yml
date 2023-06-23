@@ -34,7 +34,16 @@ jobs:
     -  name: API with curl
        run: |  
             curl -x GET https://sonarcloud.io/component_measures?metric=Coverage,code_smells,vulnerabilities&id=devopsnishu_github-example-package
-           
+              if ["$metric"== "Coverage"],
+              then
+                if[$(value) -lt "Coverage"],
+                 then 
+                  echo "sonar-coverage check :fail"
+                else
+                 echo "sonar-coverage check :pass"
+               else
+                echo "coverage"
+               fi 
     - name: Test with Maven
       run: mvn -B test --file pom.xml
     - name: Archive production artifacts
