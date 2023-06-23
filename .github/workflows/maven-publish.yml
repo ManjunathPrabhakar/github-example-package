@@ -33,7 +33,7 @@ jobs:
         SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
     -  name: API with curl
        run: |  
-            curl -x GET https://sonarcloud.io/component_measures?metric=Coverage,code_smells,vulnerabilities&id=devopsnishu_github-example-package
+            curl -u https://sonarcloud.io/component_measures?metric=Coverage,code_smells,vulnerabilities&id=devopsnishu_github-example-package
               if ["$metric"== "Coverage"],
               then
                 if[$(value) -lt "Coverage"],
