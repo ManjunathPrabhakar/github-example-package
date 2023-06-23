@@ -34,7 +34,7 @@ jobs:
     -  name: API with curl
        run: |  
             curl -x GET https://sonarcloud.io/component_measures?metric=Coverage&id=devopsnishu_github-example-package
-            curl -u https://sonarcloud.io/code?id=devopsnishu_github-example-package
+            curl -x GET https://sonarcloud.io/code?id=devopsnishu_github-example-package
     - name: Test with Maven
       run: mvn -B test --file pom.xml
     - name: Archive production artifacts
