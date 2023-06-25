@@ -33,10 +33,10 @@ jobs:
         SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
     -  name: API with curl
        run: |  
-            curl -u ${{ secrets.SONAR_TOKEN }}${{ secrets.SONAR_HOST_URL }}/api/measures/component_measures?metric=Coverage,code_smells,vulnerabilities&id=devopsnishu_github-example-package
-              if ["$metric"== "Coverage"],
+            curl -u https://sonarcloud.io/api/project_badges/measure?project=devopsnishu_github-example-package&metric=coverage
+              if ["$metric"== "coverage"],
               then
-                if[$(value) -lt "Coverage"],
+                if[$(value) -lt "coverage"],
                  then 
                   echo "sonar-coverage check :fail"
                 else
