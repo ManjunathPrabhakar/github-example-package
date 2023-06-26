@@ -34,16 +34,7 @@ jobs:
     -  name: API with curl
        run: |  
             curl -u ${{ secrets.SONAR_TOKEN }} https://sonarcloud.io/api/project_badges/measure?project=devopsnishu_github-example-package&metric=coverage
-              if ["$metric"== "coverage"],
-              then
-                if[$(value) -lt "coverage"],
-                 then 
-                  echo "sonar-coverage check :fail"
-                else
-                 echo "sonar-coverage check :pass"
-               else
-                echo "coverage"
-               fi 
+            
     - name: Test with Maven
       run: mvn -B test --file pom.xml
     - name: Archive production artifacts
